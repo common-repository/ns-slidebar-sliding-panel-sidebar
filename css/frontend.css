@@ -1,0 +1,205 @@
+/** Functional / non-customizable css **/
+#ns-slidebar {
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	z-index: 999999999;
+	color: #333;
+}
+
+#ns-slidebar a {
+	color: #333;	
+}
+
+#ns-slidebar a:hover {
+	color: #666;	
+}
+
+body.admin-bar #ns-slidebar {
+	top: 32px;
+	margin-bottom: 32px;
+}
+#ns-slidebar-control {
+	width: 100%;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+}
+#ns-slidebar-control h3 {
+	margin: 0;
+	white-space: nowrap;
+}
+#ns-slidebar-search-form {
+	width: 100%;
+	overflow: hidden;
+	display: none;
+}
+#ns-slidebar-content {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	display: none;
+}
+#ns-slidebar.opening #ns-slidebar-search-form,
+#ns-slidebar.open #ns-slidebar-search-form,
+#ns-slidebar.closing #ns-slidebar-search-form,
+#ns-slidebar.opening #ns-slidebar-content,
+#ns-slidebar.open #ns-slidebar-content,
+#ns-slidebar.closing #ns-slidebar-content {
+	display: block;
+}
+#ns-slidebar.opening #ns-slidebar-control,
+#ns-slidebar.open #ns-slidebar-control,
+#ns-slidebar.closing #ns-slidebar-control {
+	display: none;
+}
+#ns-slidebar-search-results-message {
+	display: none;
+}
+#ns-slidebar-search-results-more {
+	display: none;
+	cursor: pointer;
+}
+.ns-slidebar-hidden {
+	display: none;
+}
+
+/** Aesthetic / to be considered for settings or "slidebar themes" **/
+#ns-slidebar.opening, #ns-slidebar.open, #ns-slidebar.closing {
+	box-shadow: 0 0 20px rgba(0,0,0,.25);
+}
+#ns-slidebar-control h3 {
+	color: #eee;
+	background: #303030;
+	padding: 1em 1.6em;
+	font-size: 14px;
+}
+#ns-slidebar-content {
+	background: white;
+}
+#ns-slidebar-search-form form {
+	padding: 1em 1.6em;
+	background: #303030;
+	background-image: url(/wp-content/plugins/ns-slidebar/images/close-red-icon.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}
+#ns-slidebar-search-form [type=submit] {
+	background: transparent url(../images/search-icon.png) no-repeat center center;
+	overflow: hidden;
+	text-indent: -99999px;
+	width: 34px;
+	padding: 12px 15px;
+}
+#ns-slidebar-search-form [name=s], #ns-slidebar-search-form [name=s]:focus {
+	border: none !important;
+	box-shadow: none !important;
+	color: #ccc;
+	background: transparent;
+}
+#ns-slidebar-search-results-message {
+	font-size: 1.2em;
+	padding: 1em 1.6em;
+	text-align: center;
+}
+.ns-slidebar-search-result {
+	padding: 1em 1.6em;
+}
+.ns-slidebar-search-result.odd {
+	background: #f1f1f1;
+}
+.ns-slidebar-search-title {
+	font-size: 1.1em;
+	font-weight: bold;
+	margin: 0 0 .2em;
+}
+.ns-slidebar-search-post-type {
+	font-style: italic;
+	font-size: 0.6em;
+	text-transform: uppercase;
+	padding: 0.2em 0.4em;
+	margin: 0 0 .2em;
+	display: inline-block;
+	border: solid 1px;
+}
+.ns-slidebar-search-excerpt {
+	font-size: 0.8em;
+}
+#ns-slidebar-search-results-more {
+	font-size: 1.2em;
+	text-align: center;
+}
+#ns-slidebar-search-results-more:after {
+	content: url(../images/more-icon.png);
+	position: relative;
+	top: 6px;
+	left: 6px;
+}
+#ns-slidebar-widgets {
+	padding: 1em 1.6em;
+}
+
+/** Custom - should probably be moved to theme **/
+#ns-slidebar-search-form .ns-input-group,
+#ns-slidebar-search-form .ns-input-group-btn {
+	position: relative;
+}
+
+#ns-slidebar-search-form .ns-input-group-btn {
+	position: absolute;
+    top: 45%;
+    right: 0;
+    margin: -8% 0 0 -25%;
+}
+
+#ns-slidebar-search-form .ns-input-group-btn button {
+	border: none;
+}
+
+#ns-slidebar-search-form .ns-input-group {
+	width: 100% !important;
+	border: 1px solid #CCC;
+	border-radius: 20px;
+}
+
+
+#ns-slidebar .ns-input-group {
+	position: relative;
+	border-collapse: separate;
+}
+
+#ns-slidebar .ns-form-control {
+	margin-left: 5px;
+	padding: 0.5em;
+	padding-right: 2.4em;
+}
+
+#ns-slidebar .ns-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+#ns-slidebar .ns-sr-only-focusable:active,
+#ns-slidebar .ns-sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+#ns-slidebar .ns-search-submit {
+  display: inline-block !important;
+  margin-left: -1px;
+  margin-bottom: 0;
+}
